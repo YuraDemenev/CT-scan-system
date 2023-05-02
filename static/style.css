@@ -1,0 +1,133 @@
+.axial_image {
+    width: 370px;
+    height: 370px;
+    /* margin: 0 100% 0 0; */
+    grid-area: imageAxial;
+
+}
+
+.segmentation_image {
+    width: 370px;
+    height: 370px;
+    /* margin: 0 100% 0 0;
+    position: relative;
+    top: -374px;
+    right: -420px; */
+    grid-area: imageSegmentation;
+}
+
+.sagital_image {
+    width: 370px;
+    height: 370px;
+    /* margin: 0 0 0 50px;
+    position: relative; */
+    /* top: 100px; */
+    transform: rotate(-90deg);
+    grid-area: imageSagital;
+}
+
+.coronal_image {
+    width: 370px;
+    height: 370px;
+    /* margin: 0 0 0 0px; */
+    /* position: relative; */
+    transform: rotate(-90deg);
+    grid-area: imageCoronal;
+}
+
+.axial_slider {
+    float: left;
+    width: 370px;
+    /* margin: 0 100% 0 0;
+    position: relative;
+    top: -369px; */
+    grid-area: sliderAxial;
+}
+
+.coronal_slider {
+    float: left;
+    width: 370px;
+
+    grid-area: sliderCoronal;
+}
+
+.sagital_slider {
+    float: left;
+    width: 370px;
+
+    grid-area: sliderSagital;
+}
+
+.countSegmentsDiv {
+    width: 100px;
+    grid-area: countSegmentsDiv;
+}
+
+.countSegments {
+    width: 70px;
+    height: 30px;
+    top: 10px;
+    position: relative;
+}
+
+.start_segmentation {
+    top: 20px;
+    position: relative;
+}
+
+.start_mask {
+    top: 30px;
+    position: relative;
+}
+
+.containerTable {
+    width: auto;
+    /* grid-area: containerTable; */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 370px);
+    grid-row-gap: 25px;
+    grid-column-gap: 25px;
+
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(100px, auto); */
+    grid-template-areas:
+        "sliderAxial  . ."
+        "imageAxial imageSegmentation countSegmentsDiv"
+        "sliderCoronal sliderSagital ."
+        "imageCoronal  imageSagital .";
+    grid-area: grid-container;
+    width: 1200px;
+
+    position: relative;
+    left: 20px;
+    top: 20px;
+}
+
+.mainGrid {
+    display: grid;
+
+    grid-template-areas:
+        "grid-container gridTable";
+}
+
+.gridTable {
+    grid-area: gridTable;
+    width: auto;
+    position: relative;
+    left: 20px;
+    top: 80px;
+}
+
+.scan_object {
+    width: 200px;
+    height: 100px;
+}
+
+.notes {
+    display: flex;
+    flex-direction: column;
+}
